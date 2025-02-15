@@ -1,0 +1,14 @@
+{
+  "name": "exp-next-hono-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clietn:dev": "pnpm --filter client dev",
+    "server:dev": "pnpm --filter server dev",
+    "dev": "pnpm -r --parallel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.9.0"
+}

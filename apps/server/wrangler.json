@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "server",
+  "name": "play-with-monorepo-server",
   "main": "src/index.ts",
   "compatibility_date": "2025-02-15"
   // "compatibility_flags": [

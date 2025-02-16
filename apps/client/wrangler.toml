@@ -1,0 +1,4 @@
+name = "play-with-monorepo"
+compatibility_date = "2025-2-16"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"

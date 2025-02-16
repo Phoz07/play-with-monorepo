@@ -8,7 +8,8 @@
     {
       "binding": "DB",
       "database_name": "playground-prod",
-      "database_id": "6e060765-a338-4823-8d25-5c39f6c03dc6"
+      "database_id": "6e060765-a338-4823-8d25-5c39f6c03dc6",
+      "migrations_dir": "migrations"
     }
   ]
 }

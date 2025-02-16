@@ -1,9 +1,13 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+export type Env = {
+  DB: D1Database;
+};
 
-app.get('/', (c) => {
-  return c.text('This is main route')
-})
+const app = new Hono();
 
-export default app
+app.get("/", (c) => {
+  return c.text("This is main route");
+});
+
+export default app;

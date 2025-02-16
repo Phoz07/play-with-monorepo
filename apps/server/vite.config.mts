@@ -9,6 +9,8 @@ export default defineConfig({
       adapter,
       entry: "src/index.ts",
     }),
-    build(),
+    build({
+      entry: "src/index.ts",
+    }),
   ],
 });

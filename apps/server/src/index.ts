@@ -7,7 +7,7 @@ export type Env = CloudflareEnv;
 const app = new Hono<{ Bindings: Env }>();
 
 app.get("/", (c) => {
-  return c.text("This is main route");
+  return c.json({ env: c.env.ENVIRONMENT! });
 });
 
 app.get("/users", async (c) => {

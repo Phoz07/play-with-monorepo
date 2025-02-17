@@ -4,6 +4,9 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-02-15",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "ENVIRONMENT": "development"
+  },
   "d1_databases": [
     {
       "binding": "DB",

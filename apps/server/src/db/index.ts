@@ -1,10 +1,6 @@
-import { drizzle } from 'drizzle-orm/d1';
+import { drizzle } from "drizzle-orm/d1";
 
-export interface Env {
-  DB: D1Database;
+// function เชื่อมต่อกับฐานข้อมูล
+export function createDb(db: D1Database) {
+  return drizzle(db);
 }
-export default {
-  async fetch(request: Request, env: Env) {
-    const db = drizzle(env.DB);
-  },
-};

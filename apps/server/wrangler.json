@@ -1,15 +1,43 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "play-with-monorepo=server",
+  "name": "play-with-monorepo-server",
   "main": "src/index.ts",
   "compatibility_date": "2025-02-15",
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "playground-prod",
-      "database_id": "6e060765-a338-4823-8d25-5c39f6c03dc6",
+      "database_name": "playground-stg",
+      "database_id": "de39771e-6e81-4742-b346-8dc9543b0279",
       "migrations_dir": "migrations"
     }
-  ]
+  ],
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "playground-stg",
+          "database_id": "de39771e-6e81-4742-b346-8dc9543b0279",
+          "migrations_dir": "migrations"
+        }
+      ]
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "playground-prod",
+          "database_id": "6e060765-a338-4823-8d25-5c39f6c03dc6",
+          "migrations_dir": "migrations"
+        }
+      ]
+    }
+  }
 }
